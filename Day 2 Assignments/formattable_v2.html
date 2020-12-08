@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <form action="about_v2.html" target="_blank">
+            <tr>
+                <td>First Name</td>
+                <td><input type="text" name="username" placeholder="First Name" required></td>
+            </tr>
+
+            <tr>
+                <td>Last Name</td>
+                <td><input type="text" name="username" placeholder="Last Name" required></td>
+            </tr>
+
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="password" placeholder="Alphanumeric Password" required></td>
+            </tr>
+
+
+
+
+            <tr>
+                <td>Email Id</td>
+                <td><input type="email" name="email address" placeholder="Email Id" required></td>
+            </tr>
+
+            <tr>
+                <td>Mobile Number</td>
+                <td><input type="tel" pattern="[0-9]{10}" name="Mobile Number" required maxlength="10" required></td>
+            </tr>
+
+            <tr>
+                <td>Gender</td>
+                <td><input type="radio" name="r1" value="male">Male<input type="radio" name="r1" value="female">Female</td>
+            </tr>
+
+            <tr>
+                <td>Hobbies</td>
+                <td><input type="checkbox" name="hobbies" value="music">Music
+                    <input type="checkbox" name="hobbies" value="sports">Sports
+                    <input type="checkbox" name="hobbies" checked value="binge watching">Binge Watching
+                    <input type="checkbox" name="hobbies" value="book reading">Book Reading
+                </td>
+            </tr>
+
+            <tr>
+                <td>Technology</td>
+                <td>
+                    <select name="course" multiple size="3">
+                    <option>--select--</option>
+                    <option value="1">Java</option>
+                    <option>Python</option>
+                    <option>PHP</option>
+                    <option>C</option>
+                    <option>C#</option>
+                    <option>C++</option>
+                    <option>Ruby</option>
+                    <option>Pearl</option>
+                </select>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td>Rate yourself in the selected Technology</td>
+                <td>
+                    <input type="range" name="num2" min="1" max="10" onchange="result.value=parseInt(num2.value)">
+                    <output name="result"></output>
+
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>Comments</td>
+                <td><textarea cols="20" rows="10"></textarea></td>
+            </tr>
+
+            <tr>
+                <td><input type="submit" value="Register"></td>
+                <td><input type="reset" value="Reset"><input type="submit" value="Don't Validate" formnovalidate></td>
+            </tr>
+        </form>
+    </table>
+
+
+
+</body>
+
+</html>
