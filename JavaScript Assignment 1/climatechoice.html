@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate</title>
+
+    <script>
+        function suggestUser() {
+            var climate1 = document.getElementById("climate").value;
+
+            // document.write(climate)
+
+            var dummydiv = document.getElementById("mydiv")
+
+
+            switch (climate1) {
+                case '1':
+                    dummydiv.innerHTML = "Drink Tea and Samosa. Enjoy the Rain"
+                    break;
+
+                case '2':
+                    dummydiv.innerHTML = "<br>Eat Ice-Cream and go fro swimming"
+
+                    break;
+
+                case '3':
+                    dummydiv.innerHTML = "<br>Drink hot soup and sleep"
+                    break;
+
+                case '4':
+                    dummydiv.innerHTML = "<br>Enjoy Cycling and Kite flying"
+
+                    break;
+
+                case '5':
+                    dummydiv.innerHTML = "<br>Enjoy the cool breeze"
+                    break;
+
+                case '6':
+                    dummydiv.innerHTML = "<br>Time to relax"
+                    break;
+            }
+
+            // document.write(dummydiv)
+
+
+
+        }
+    </script>
+
+
+
+</head>
+
+
+
+
+
+
+
+<body>
+
+
+    <div style="display: inline-block; text-transform: capitalize; height: 50px; width: auto;">
+
+        climate<select name="climate" id="climate">
+    
+            <option>---select---</option>
+            <option value="1">Rainy</option>
+            <option value="2">Summer</option>
+            <option value="3">Winter</option>
+            <option value="4">Windy</option>
+            <option value="5">Spring</option>
+            <option value="6">Fall</option>
+    
+    
+    
+    
+    
+        </select>
+
+        <input type="button" value="Forward" onclick=suggestUser()>
+
+
+
+    </div>
+
+    <div id="mydiv" style="color: white; background-color: black; display: inline-block; height: 50px; width: auto; text-align: center;"></div>
+
+</body>
+
+
+</html>

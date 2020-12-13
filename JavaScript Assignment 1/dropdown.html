@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+
+    <script>
+        var laptop = ["HP", "Dell", "Lenovo", "Asus", "Acer"];
+        var mobile = ["Motorola", "OnePlus", "Xiaomi", "Oppo", "Vivo", "Samsung"];
+        var tv = ["Onida", "Videocon", "TCL", "Samsung", "LG"];
+
+
+        function list() {
+            choice = document.getElementById("select").value;
+            var dummydiv = document.getElementById("mydiv");
+
+            switch (choice) {
+                case '1':
+                    dummydiv.innerHTML = "Welcome to Croma<br>"
+                    laptop.forEach(function(element) {
+                        dummydiv.innerHTML += element + "<br>";
+
+                    });
+                    break;
+
+                case '2':
+
+                    dummydiv.innerHTML = "Welcome to Croma<br>"
+
+                    mobile.forEach(function(element) {
+                        dummydiv.innerHTML += element + "<br>";
+
+                    });
+                    break;
+
+                case '3':
+                    dummydiv.innerHTML = "Welcome to Croma<br>"
+
+                    tv.forEach(function(element) {
+                        dummydiv.innerHTML += element + "<br>";
+
+                    });
+
+
+
+            }
+
+        }
+    </script>
+
+
+
+
+</head>
+
+
+
+<body>
+    <div style="display: inline-block; padding: 30px;">
+        Selection of Product: <select name="catogeries" id="select" onchange="list()">
+            <option value="0">---select---</option>
+            <option value="1">Laptop</option>
+            <option value="2">Mobile</option>
+            <option value="3">TV</option>
+
+
+
+
+
+
+        </select>
+
+
+
+    </div>
+
+    <br>
+    <br>
+
+    <div id="mydiv" style="background-color: black; color: white; width: 300px; padding-left: 100px;"></div>
+
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+
+    <script>
+        var usernames = ["John", "Brad", "Leo", "Brad", "Vidit", "Samay"];
+        var name = prompt("Enter your Name:");
+
+        let flag = 0;
+
+        for (let index = 0; index < usernames.length; index++) {
+            const element = usernames[index];
+
+            if (name == element) {
+                flag = 1
+                break;
+
+            } else
+                flag = 0
+        }
+
+        if (flag == 1) {
+            alert("Username already exist")
+
+        } else {
+            alert('New user You are registered');
+            document.write("New user: ", name)
+        }
+    </script>
+
+
+
+
+
+</head>
+
+
+<body>
+
+
+
+
+
+
+</body>
+
+
+</html>

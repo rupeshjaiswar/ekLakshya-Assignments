@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register User</title>
+
+    <script>
+        var usernames = ["John", "Brad", "Leo", "Brad", "Vidit", "Samay"];
+
+        console.log(name)
+
+
+        function loginUser() {
+
+            var name = document.getElementById("username").value;
+
+            let flag = 0;
+
+
+
+            for (let index = 0; index < usernames.length; index++) {
+                const element = usernames[index];
+
+                if (name == element) {
+                    flag = 1;
+                    break;
+
+                } else
+                    flag = 0
+
+
+
+            }
+            if (flag == 1) {
+                document.getElementById("mydiv").innerHTML = "Welcome" + name;
+
+            } else {
+                document.getElementById("mydiv").innerHTML = "Wrong username, try again"
+            }
+
+
+
+        }
+    </script>
+
+
+</head>
+
+
+
+<body>
+    <div style="display: inline-block; padding-top: 20px;">
+        <table cellspacing="10px">
+            <tr>
+                <td>Enter Name:</td>
+                <td><input type="text" name="name" placeholder="Username" id="username"></td>
+                <td> <input type="button" value="Validate" onclick="loginUser()"></td>
+            </tr>
+        </table>
+
+
+    </div>
+
+    <div id="mydiv" style="font-style:italic; display: inline-block; text-align: center;"></div>
+
+</body>
+
+
+</html>
