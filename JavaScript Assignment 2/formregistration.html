@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="icon" type="image/jpg" href="images/profile.jpg" />
+
+    <script>
+        var usernames = ["Johnson", "Bradley", "Leonardo", "Jennifer", "Scarlet"];
+
+        function validateUser() {
+            validateName();
+            validatePass();
+            validateEmail();
+            validateNum();
+            complete();
+
+
+        }
+
+        function validateName() {
+            var username = document.getElementById("username").value;
+
+
+            if (username.length < 5 || username.length > 15) {
+                alert("Enter a valid username with length between 5-15")
+                document.myform.uname.focus();
+                return false
+            } else {
+                return (true)
+            }
+
+            let flag = 0;
+
+
+            for (let index = 0; index < usernames.length; index++) {
+                const element = usernames[index];
+
+                if (username == element) {
+                    flag = 1;
+
+                    alert("This Username Already Exists")
+                    document.myform.uname.focus();
+
+
+                    break;
+                }
+
+
+            }
+            if (flag == 0) {
+
+
+
+                alert("You are registered Sucessfully");
+            }
+
+
+
+
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+        function validatePass() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var confirmpass = document.getElementById("confirmpass").value;
+            regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^.*&])(?!.*\s)(?=.*\d).{8,15}$/;
+
+            if (password == username) {
+                alert("Password should not be same as username")
+                document.myform.pass.focus();
+
+
+
+
+            } else if (!password.match(regex)) {
+
+                alert("The Password should have atleast one lowercase, one uppercase letters, one special characters, no spaces and the length of password should be atleast 8-15 characters long")
+                document.myform.pass.focus();
+
+            } else if (!confirmpass.match(password)) {
+                alert("Password Doesn't match")
+                document.myform.pass1.focus();
+            } else {
+                return (true)
+
+
+            }
+
+        }
+
+
+
+
+
+        function validateEmail() {
+            var mail = document.getElementById("mail").value;
+
+            present = /^(?=.*[a-z])(?=.*[!@#$%^.*&])(?!.*\s)(?=.*\d).{8,}$/;
+
+
+
+            if (mail.match(present)) {
+                return (true)
+
+            } else {
+                alert("Enter a valid Email Id")
+                document.myform.email.focus();
+
+            }
+
+        }
+
+
+        function validateNum() {
+            var number = document.getElementById("num").value;
+            if (!number.match(/^\d{10}$/) && number.length < 11) {
+                alert("Enter a valid mobile number")
+                document.myform.number.focus();
+            } else {
+                return (true)
+
+
+            }
+
+        }
+
+
+
+        function complete() {
+            alert("You are registered");
+            document.myform.submit();
+        }
+    </script>
+
+
+
+
+
+
+</head>
+
+<body>
+    <div id="mydiv">
+        <h2 style="text-align: center;">Create Your Account</h2>
+        <table cellspacing="10" cellpadding="10" align="center" id="table">
+            <form action="about_v3.html" target="_blank" name="myform">
+                <tr>
+                    <td>Username</td>
+                    <td><input type="text" name="uname" placeholder="Username" id="username" required></td>
+                </tr>
+
+                <tr>
+                    <td>Email Id</td>
+                    <td><input type="email" name="email" placeholder="Email Id" id="mail" required></td>
+                </tr>
+
+
+
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="pass" placeholder="Alphanumeric Password" id="password" required></td>
+                </tr>
+
+                <tr>
+                    <td>Confirm Password</td>
+                    <td><input type="password" name="pass1" required id="confirmpass"></td>
+                </tr>
+
+
+
+
+
+
+                <tr>
+                    <td>Mobile Number</td>
+                    <td><input type="tel" pattern="[0-9]{10}" name="number" required maxlength="10" id="num" required></td>
+                </tr>
+
+                <tr>
+                    <td>Gender</td>
+                    <td><input type="radio" name="gender" value="male" id="gen1">Male
+                        <input type="radio" name="gender" value="female" id="gen2">Female
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>City</td>
+                    <td><input type="text" name="city"></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><input type="reset" value="Clear" id="clear">
+                        <input type="button" value="Validate" id="button" onclick="validateUser()"></td>
+                </tr>
+
+
+
+
+            </form>
+        </table>
+    </div>
+
+    <div id="mydiv"></div>
+
+
+
+</body>
+
+</html>
