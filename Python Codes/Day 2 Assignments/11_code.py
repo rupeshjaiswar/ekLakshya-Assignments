@@ -1,0 +1,7 @@
+str = input("Enter the string of length 10:")
+print("Entered string is:",str)
+print("1-5:",str[1:6])
+print("2-7:",str[2:8])
+print("3 to end:",str[3:])
+print("start to 6:",str[0:7])
+print("3 to last but one character:",str[3:-1])

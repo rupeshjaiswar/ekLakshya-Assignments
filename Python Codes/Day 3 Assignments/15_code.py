@@ -1,0 +1,5 @@
+t = (1, 2, 10, 8, 4, 18, 56, 47, 0, 8, 25)
+print("The tuple is:", t)
+print("The Maximum value in the tuple is:", max(t))
+print("The Minimum value in the tuple is:", min(t))
+print("The Sum of the elements in the tuple is:", sum(t))
